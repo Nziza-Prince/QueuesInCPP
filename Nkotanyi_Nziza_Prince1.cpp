@@ -34,7 +34,6 @@ void enqueue(Queue* q, int data){
     }
 
 }
-
 int dequeue(Queue* q){
     if(isEmpty(q)){
         cout << "Queue is empty"<<endl;

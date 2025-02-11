@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// Student structure
+
 struct Student {
     int code;
     string name;
@@ -10,22 +10,20 @@ struct Student {
     Student* next;
 };
 
-// Priority Queue structure
 struct PriorityQueue {
     Student* head;
 };
 
-// Initialize priority queue
 void initPriorityQueue(PriorityQueue* pq) {
     pq->head = nullptr;
 }
 
-// Check if priority queue is empty
+
 bool isEmpty(PriorityQueue* pq) {
     return pq->head == nullptr;
 }
 
-// Enqueue operation (based on age as priority)
+
 void enqueue(PriorityQueue* pq, int code, string name, int age) {
     Student* newStudent = new Student();
     newStudent->code = code;
@@ -46,7 +44,7 @@ void enqueue(PriorityQueue* pq, int code, string name, int age) {
     }
 }
 
-// Dequeue operation
+
 Student* dequeue(PriorityQueue* pq) {
     if (isEmpty(pq)) {
         cout << "Priority Queue is empty" << endl;
@@ -58,7 +56,7 @@ Student* dequeue(PriorityQueue* pq) {
     return temp;
 }
 
-// Display priority queue
+
 void displayPriorityQueue(PriorityQueue* pq) {
     if (isEmpty(pq)) {
         cout << "Priority Queue is empty" << endl;
@@ -76,9 +74,9 @@ int main() {
     PriorityQueue pq;
     initPriorityQueue(&pq);
 
-    enqueue(&pq, 101, "Alice", 20);
-    enqueue(&pq, 102, "Bob", 22);
-    enqueue(&pq, 103, "Charlie", 19);
+    enqueue(&pq, 101, "Nziza", 20);
+    enqueue(&pq, 102, "Prince", 22);
+    enqueue(&pq, 103, "Nkotanyi", 19);
 
     displayPriorityQueue(&pq);
 
