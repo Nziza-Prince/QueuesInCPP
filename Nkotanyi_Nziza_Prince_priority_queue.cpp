@@ -49,6 +49,7 @@ Student* dequeue(PriorityQueue* pq) {
     if (isEmpty(pq)) {
         cout << "Priority Queue is empty" << endl;
         return nullptr;
+        
     }
 
     Student* temp = pq->head;
